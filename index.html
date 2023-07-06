@@ -51,50 +51,99 @@
                     <a class="menu-item active">
                         <span><i class="fas fa-home"></i></span><h3>Home</h3>
                     </a>
-                    <a class="menu-item active">
+                    <a class="menu-item">
                         <span><i class="fas fa-compass"></i></span><h3>Explore</h3>
                     </a>
-                    <a class="menu-item active">
-                        <span><i class="fas fa-bell"></i></span><h3>Notification</h3>
+                    <a class="menu-item" id="notifications">
+                        <span><i class="fas fa-bell"><small class="notification-count">9+</small></i></span><h3>Notification</h3>
                         <!--Notification Pop-up-->
                         <div class="notification-popup">
                             <div class="profile-picture">
                                 <img src="images/profile-2.jpg" alt="profile picture">
                             </div>
                             <div class="notification-body">
-                                <b>Anang Sam</b>accepted your friend request
+                                <b>Anang Sam </b>accepted your friend request
                                 <small class="text-muted">2 DAYS AGO</small>
                             </div>
                             <div class="profile-picture">
                                 <img src="images/profile-3.jpg" alt="profile picture">
                             </div>
                             <div class="notification-body">
-                                <b>Mark</b> accepted your friend request
-                                <small class="text-muted">2 DAYS AGO</small>
+                                <b>Minso Mark</b> accepted your friend request
+                                <small class="text-muted">5 HOURS AGO</small>
+                            </div>
+                            <div class="profile-picture">
+                                <img src="images/profile-4.jpg" alt="profile picture">
+                            </div>
+                            <div class="notification-body">
+                                <b>Amoah Kingsley </b>accepted your friend request
+                                <small class="text-muted">1 DAY AGO</small>
+                            </div>
+                            <div class="profile-picture">
+                                <img src="images/profile-5.jpg" alt="profile picture">
+                            </div>
+                            <div class="notification-body">
+                                <b>Patience Ahema </b>accepted your friend request
+                                <small class="text-muted">1 HOUR AGO</small>
                             </div>
                         </div>
+                        <!--END NOTIFICATION POPUP-->
                     </a>
-                    <a class="menu-item active">
-                        <span><i class="fas fa-envelope"></i></span><h3>Message</h3>
+                    <a class="menu-item" id="message-notification">
+                        <span><i class="fas fa-envelope"><small class="notification-count">6</small></i></span><h3>Message</h3>
                     </a>
-                    <a class="menu-item active">
+                    <a class="menu-item">
                         <span><i class="fas fa-bookmark"></i></span><h3>Bookmarks</h3>
                     </a>
-                    <a class="menu-item active">
+                    <a class="menu-item">
                         <span><i class="fas fa-store"></i></span><h3>E-market</h3>
                     </a>
-                    <a class="menu-item active">
+                    <a class="menu-item">
                         <span><i class="fas fa-paint-brush"></i></span><h3>Theme</h3>
                     </a>
-                    <a class="menu-item active">
+                    <a class="menu-item">
                         <span><i class="fas fa-cogs"></i></span><h3>Settings</h3>
                     </a>
                 </div>
+                <!--    END OF SIDEBAR-->
+                <label for="create-post" class="btn btn-primary">Create Post</label>
+
+
             </div>
             <!--MIDDLE-->
-            <div class="middle"></div>
+            <div class="middle">
+                absolute: An element with position: absolute is positioned relative to its nearest positioned ancestor. If there is no positioned ancestor, it is positioned relative to the initial containing block (usually the viewport). Using the top, bottom, left, and right properties, you can specify exact coordinates to position the element within its containing block.
+
+fixed: An element with position: fixed is positioned relative to the viewport, which means it remains fixed in its position even when the page is scrolled. Like absolute, you can use the top, bottom, left, and right properties to specify exact coordinates for the fixed element.
+
+sticky: The position: sticky value is a hybrid of relative and fixed. It allows an element to be positioned based on the user's scroll position. The element remains in the normal flow of the document until the user scrolls to a specific threshold, at which point it behaves like a fixed positioned element.
+
+It's important to note that elements with position: absolute, fixed, or sticky are taken out of the normal document flow and may overlap other elements. When using these positioning values, it's crucial to consider the overall layout and potentially use additional CSS properties like z-index to control layering.
+
+The position property is a fundamental tool for creating complex layouts and implementing various visual effects in CSS. Understanding and utilizing different position values can help you precisely control the positioning of elements on your web page.
+
+
+
+
+
+            </div>
             <!--RIGHT-->
-            <div class="right"></div>
+            <div class="right">
+                absolute: An element with position: absolute is positioned relative to its nearest positioned ancestor. If there is no positioned ancestor, it is positioned relative to the initial containing block (usually the viewport). Using the top, bottom, left, and right properties, you can specify exact coordinates to position the element within its containing block.
+
+fixed: An element with position: fixed is positioned relative to the viewport, which means it remains fixed in its position even when the page is scrolled. Like absolute, you can use the top, bottom, left, and right properties to specify exact coordinates for the fixed element.
+
+sticky: The position: sticky value is a hybrid of relative and fixed. It allows an element to be positioned based on the user's scroll position. The element remains in the normal flow of the document until the user scrolls to a specific threshold, at which point it behaves like a fixed positioned element.
+
+It's important to note that elements with position: absolute, fixed, or sticky are taken out of the normal document flow and may overlap other elements. When using these positioning values, it's crucial to consider the overall layout and potentially use additional CSS properties like z-index to control layering.
+
+The position property is a fundamental tool for creating complex layouts and implementing various visual effects in CSS. Understanding and utilizing different position values can help you precisely control the positioning of elements on your web page.
+
+
+
+
+
+            </div>
         </div>
     </main>
 </body>
