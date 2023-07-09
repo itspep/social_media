@@ -199,7 +199,7 @@ main .container .left .profile{
 
 .left .sidebar .active::before{
     content: "";
-    displaay: block;
+    display: block;
     width: 0.5rem;
     height: 100%;
     position: absolute;
@@ -275,7 +275,6 @@ main .container .left .profile{
     align-items: center;
     color: white;
     font-size: 0.7rem;
-    width:100%;
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -331,5 +330,43 @@ main .container .left .profile{
     background: var(--color-white);
     padding: 0.4rem var(--card-padding);
     border-radius: var(--border-radius)
+}
 
+.middle .create-post input[type="text"]{
+    justify-content: start;
+    width: 100%;
+    padding: 1rem;
+    background: transparent;
+    color: var(--color-dark);
+    margin: 1rem;
+}
+
+/*FEED*/
+.middle .feeds .feed{
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+.middle .feed .head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.middle .feed .user{
+    display:flex;
+    gap: 1rem;
+}
+
+.middle .feed .picture{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+
+.middle .feed .action-buttons{
+    display: flex;
+    justify-content: space-between;
 }
