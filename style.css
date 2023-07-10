@@ -358,7 +358,6 @@ main .container .left .profile {
 .middle .create-post input[type="text"] {
   text-align: start;
   width: 100%;
-  padding: 1rem;
   background: transparent;
   color: var(--color-dark);
   margin: 1rem;
