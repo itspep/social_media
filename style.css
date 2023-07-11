@@ -547,7 +547,7 @@ main .container .right{
   display: grid;
   place-items: center;
   font-size: 0.9rem;
-  
+
 }
 
 .customize-theme .card{
@@ -590,3 +590,48 @@ main .container .right{
   border-radius: 50%;
   cursor: pointer;
 }
+
+.customize-theme .choose-size span .active{
+  background: var(--color-primary);
+}
+
+/*--FONT SIZE--*/
+.customize-theme .color{
+  margin-top: 2rem;
+}
+
+.customize-theme .choose-color{
+  background: var(--color-light);
+  padding: var(--search-padding);
+  border-radius: var(--card--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.customize-theme .choose-color span{
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+
+.customize-theme .choose-color span:nth-child(1){
+  background: hsl(252, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(2){
+  background: hsl(52, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(3){
+  background: hsl(352, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(4){
+  background: hsl(152, 75%, 60%);
+}
+
+.customize-theme .choose-color span:nth-child(1){
+  background: hsl(202, 75%, 60%);
+}
+
