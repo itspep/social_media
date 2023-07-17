@@ -553,8 +553,9 @@ main .container .right{
   background: var(--color-white);
   padding: 3rem;
   border-radius: var(--card-border-radius);
-  width: 35%;
+  width: 50%;
   margin-left: -3rem;
+  box-shadow: 0 0 1rem var(--color-primary);
 }
 
 
@@ -636,7 +637,7 @@ main .container .right{
   background: hsl(202, 75%, 60%);
 }
 
-.customize-them .choose-color span.active{
+.customize-theme .choose-color span.active{
   border: 5px solid white;
 }
 
@@ -722,6 +723,10 @@ main .container .left .profile{
 .left .btn{
   display: none;
 }
+
+.customize-theme .card{
+  width: 80vw;
+}
 }
 
 /*-------------------------------------
@@ -767,5 +772,9 @@ MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES
 
   main .container .right{
     display: none;
+  }
+
+  .customize-theme .card{
+    width: 92vw;
   }
 }

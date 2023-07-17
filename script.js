@@ -4,6 +4,14 @@ const menuItems = document.querySelectorAll(".menu-item");
 //MESSAGES
 const messageNotification = document.querySelector('#message-notification');
 const messages = document.querySelector('.messages');
+const message = messages.querySelectorAll('.message');
+const messageSearch = document.querySelector('#message-search');
+
+//THEME
+const theme = document.querySelector('#theme');
+const themeModal = document.querySelector('.customize-theme');
+const fontSizes = document.querySelectorAll('.choose-size span');
+var root = document.querySelector(':root');
 //SIDEBAR
 //remove active class from all menu items
 const changeActiveItem = () => {
@@ -12,7 +20,7 @@ const changeActiveItem = () => {
     })
 }
 
-
+//SIDEBAR
 menuItems.forEach(item => {
     item.addEventListener('click', ()=>{
         changeActiveItem();
@@ -27,12 +35,86 @@ menuItems.forEach(item => {
     })
 })
 
-//==========SIDEBAR=================
+//==========MESSAGES=================
+//search chats
+const searchMessages = () => {
+  const val = messageSearch.value.toLowerCase();
+  message.forEach(chat => {
+    let name = chat.querySelector('h5').textContent.toLowerCase();
+    if (name.indexOf(val) !== -1) {
+      chat.style.display = 'flex';
+    } else {
+      chat.style.display = 'none';
+    }
+  });
+};
+//search chat
+messageSearch.addEventListener('keyup', searchMessages);
+//highlights messages card when menu is clicked
 messageNotification.addEventListener('click', () => {
     messages.style.boxShadow = '0 0 1rem var(--color-primary)';
+    messageNotification.querySelector('.notification-count').style.display = 'none';
     setTimeout(
         () => {
             messages.style.boxShadow = 'none';
         }, 2000
     );
 })
+
+
+//THEME CUSTOMIZATION
+const openThemeModal = () => {
+    themeModal.style.display = 'grid';
+}
+
+//closing the modal
+
+//the function
+const closeThemeModal = (e) => {
+    if(e.target.classList.contains('customize-theme')){
+        themeModal.style.display = 'none';
+    }
+}
+themeModal.addEventListener('click', closeThemeModal);
+theme.addEventListener('click', openThemeModal);
+
+// FONT SIZES
+//remove active class from spans or font size selectors
+const removeSizeSelector = () => {
+  fontSizes.forEach(size => {
+    size.classList.remove('active');
+  })
+}
+
+fontSizes.forEach(size => {
+    size.addEventListener('click', () => {
+    removeSizeSelector();
+    let fontSize;
+    size.classList.toggle('active');
+      if (size.classList.contains('font-size-1')) {
+        fontSize = '10px';
+        root.style.setProperty('--sticky-top-left', '5.4rem');
+        root.style.setProperty('--sticky-top-right', '5.4rem');
+      } else if (size.classList.contains('font-size-2')) {
+        fontSize = '13px';
+        root.style.setProperty('--sticky-top-left', '5.4rem');
+        root.style.setProperty('--sticky-top-right', '-7rem');
+      } else if (size.classList.contains('font-size-3')) {
+        fontSize = '16px';
+        root.style.setProperty('--sticky-top-left', '2rem');
+        root.style.setProperty('--sticky-top-right', '-17rem');
+      } else if (size.classList.contains('font-size-4')) {
+        fontSize = '19px';
+        root.style.setProperty('--sticky-top-left', '-5rem');
+        root.style.setProperty('--sticky-top-right', '-25rem');
+      } else if (size.classList.contains('font-size-5')) {
+        fontSize = '22px';
+        root.style.setProperty('--sticky-top-left', '-10rem');
+        root.style.setProperty('--sticky-top-right', '-33rem');
+      }
+  
+      // Change font size of the root element
+      document.querySelector('html').style.fontSize = fontSize;
+    });
+  });
+  
