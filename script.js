@@ -119,13 +119,23 @@ fontSizes.forEach(size => {
       document.querySelector('html').style.fontSize = fontSize;
     });
   });
+
+  //a function to remove active class from colors
+  const changeActiveColorClass = () => {
+    colorPalette.forEach(colorPicker => {
+      colorPicker.classList.remove('active');
+    })
+  }
   
+
+
 
   //Changing primary colors
 colorPalette.forEach(color => {
   color.addEventListener('click', () => {
     let primaryHue;
-
+    //call the function
+    changeActiveColorClass();
     if(color.classList.contains('color-1')){
       primaryHue = 252;
     }else if(color.classList.contains('color-2')){
@@ -139,7 +149,7 @@ colorPalette.forEach(color => {
     }
     color.classList.add('active');
 
-    
+
     root.style.setProperty('--primary-color-hue', primaryHue);
   })
 })

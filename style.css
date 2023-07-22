@@ -634,10 +634,6 @@ main .container .right{
   background: hsl(152, 75%, 60%);
 }
 
-.customize-theme .choose-color span:nth-child(1){
-  background: hsl(202, 75%, 60%);
-}
-
 .customize-theme .choose-color span.active{
   border: 5px solid white;
 }
