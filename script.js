@@ -13,6 +13,10 @@ const themeModal = document.querySelector('.customize-theme');
 const fontSizes = document.querySelectorAll('.choose-size span');
 var root = document.querySelector(':root');
 const colorPalette = document.querySelectorAll('.choose-color span');
+const bg1 = document.querySelector('.bg-1');
+const bg2 = document.querySelector('.bg-2');
+const bg3 = document.querySelector('.bg-3');
+
 
 //SIDEBAR
 //remove active class from all menu items
@@ -154,3 +158,9 @@ colorPalette.forEach(color => {
   })
 })
 
+
+
+//THEME BACKGROUND VALUES
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
